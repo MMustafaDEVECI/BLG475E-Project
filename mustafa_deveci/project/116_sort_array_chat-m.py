@@ -18,10 +18,10 @@ import unittest
 
 class TestSortArray(unittest.TestCase):
 
-    def test_basic_case(self):
+    def test_basic_case(self): #assertion error
         self.assertEqual(sort_array([1, 5, 2, 3, 4]), [1, 2, 3, 4, 5])
 
-    def test_negative_numbers(self): # assertetion error
+    def test_negative_numbers(self): 
         self.assertEqual(sort_array([-2, -3, -4, -5, -6]), [-6, -5, -4, -3, -2])
 
     def test_mixed_positive_and_negative(self): # assertion error
