@@ -63,11 +63,11 @@ class TestNumericalLetterGrade(unittest.TestCase):
         self.assertEqual(numerical_letter_grade([0, 0.7]), ['E', 'D-'])
 
     def test_edge_cases(self):
-        self.assertEqual(numerical_letter_grade([3.7]), ['A-'])
-        self.assertEqual(numerical_letter_grade([3.3]), ['B+'])
-        self.assertEqual(numerical_letter_grade([2.0]), ['C+'])
-        self.assertEqual(numerical_letter_grade([1.0]), ['D'])
-        self.assertEqual(numerical_letter_grade([0.0]), ['E'])
+        self.assertEqual(numerical_letter_grade([3.7]), ['A-'])  # 3.7 is not > 3.7
+        self.assertEqual(numerical_letter_grade([3.3]), ['B+'])  # 3.3 is not > 3.3
+        self.assertEqual(numerical_letter_grade([2.0]), ['C'])   # 2.0 is not > 2.0
+        self.assertEqual(numerical_letter_grade([1.0]), ['D'])  # 1.0 is not > 1.0
+        self.assertEqual(numerical_letter_grade([0.0]), ['E'])   # Matches exactly
 
     def test_empty_list(self):
         self.assertEqual(numerical_letter_grade([]), [])

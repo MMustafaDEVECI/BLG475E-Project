@@ -37,10 +37,10 @@ class TestIsCube(unittest.TestCase):
         self.assertFalse(iscube(1729))
         self.assertFalse(iscube(99))
         
-    def test_edge_cases(self):
-        self.assertTrue(iscube(0))
-        self.assertTrue(iscube(-0))
-        self.assertFalse(iscube(1728))  # 12^3 = 1728, but test expects False (likely a typo in original test)
+def test_edge_cases(self):
+    self.assertTrue(iscube(0))
+    self.assertTrue(iscube(-0))
+    self.assertTrue(iscube(1728))  # Fixed: 12^3 = 1728, now correctly expects True
         
     def test_large_numbers(self):
         self.assertTrue(iscube(1000000))  # 100^3
